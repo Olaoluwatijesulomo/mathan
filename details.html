@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enter Your Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      width: 80%;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      background: white;
+      color: #185a9d;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <form action="gallery.html" method="get">
+    <h2>Enter Your Details</h2>
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <button type="submit">Continue</button>
+  </form>
+</body>
+</html>

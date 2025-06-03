@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Seller</title>
+  <script>
+    function getProperty() {
+      const params = new URLSearchParams(window.location.search);
+      const property = params.get("property") || "No property selected";
+      document.getElementById("selectedProperty").textContent = property;
+
+      const mailBtn = document.getElementById("emailBtn");
+      const subject = encodeURIComponent("Property Interest: " + property);
+      const body = encodeURIComponent("Hello, I am interested in " + property + ". Please contact me.");
+      mailBtn.href = `mailto:olumideakinola41@gmail.com?subject=${subject}&body=${body}`;
+    }
+    window.onload = getProperty;
+  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #e0eafc;
+      text-align: center;
+      padding: 50px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 25px;
+      background: #43cea2;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Contact Seller</h2>
+  <p>You selected:</p>
+  <h3 id="selectedProperty">Loading...</h3>
+  <a id="emailBtn">Send Email</a>
+</body>
+</html>
